@@ -18,7 +18,7 @@ jobs:
           distribution: 'temurin'
           java-version: 17
       - name: Run test and building
-        run: ./gradlew clean test jar
+        run: ./gradlew clean test bootjar
       - name: Moving jar
         run: mkdir staging && cp target/*.jar staging
       - name: Upload archive
@@ -48,4 +48,4 @@ jobs:
           environment_name: Hackatonapi-env
           version_label: ${{ github.ref_name }}-R${{ github.run_id }}-V${{ github.run_number }}
           region: us-east-1
-          deployment_package: ./staging/Package/hackaton-0.0.1-SNAPSHOT-plain.jar
+          deployment_package: ./staging/Package/hackaton-0.0.1-SNAPSHOT.jar
