@@ -44,7 +44,7 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: hackaton
+          application_name: hackatonapi
           environment_name: Hackatonapi-env
           version_label: ${{ github.ref_name }}-R${{ github.run_id }}-V${{ github.run_number }}
           region: us-east-1
