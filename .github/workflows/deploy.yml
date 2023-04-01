@@ -20,7 +20,7 @@ jobs:
       - name: Run test and building
         run: ./gradlew clean test bootjar
       - name: Moving jar
-        run: mkdir staging && cp target/*.jar staging
+        run: mkdir staging && cp build/libs/*.jar staging
       - name: Upload archive
         uses: actions/upload-artifact@v3
         with:
